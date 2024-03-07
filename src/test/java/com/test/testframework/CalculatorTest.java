@@ -47,13 +47,8 @@ class CalculatorTest {
         // given
         Calculator calculator = new Calculator();
 
-
-
-
         //when
         int actual = calculator.sum(a, b);
-
-
         //then
         assertEquals(expected, actual);
     }
