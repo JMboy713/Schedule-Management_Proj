@@ -1,5 +1,7 @@
 package com.test.testframework.event;
 
+import com.test.testframework.exception.InvalidEventException;
+
 import java.time.Duration;
 import java.time.ZonedDateTime;
 
@@ -16,6 +18,9 @@ public class AbstractEvent implements Event{
     private boolean deletedYn;
 
     protected AbstractEvent(int id, String title, ZonedDateTime startAt, ZonedDateTime endAt) {
+        if (startAt.isAfter(endAt)) {throw new InvalidEventException(String.format("시작시간(%s)이 종료시간(%s)보다 늦을 수 없습니다.", startAt, endAt));}
+
+
         this.id = id;
         this.title = title;
         this.startAt = startAt;
@@ -31,4 +36,8 @@ public class AbstractEvent implements Event{
     }
 
 
+    @Override
+    public void print() {
+
+    }
 }
