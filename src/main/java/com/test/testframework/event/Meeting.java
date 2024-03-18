@@ -19,4 +19,9 @@ public class Meeting extends AbstractEvent{
     public void print() {
         System.out.printf("[회의]%s : %s%n", getTitle(), agenda); // 어떤 agenda에서 회의를 할것인지.
     }
+
+    @Override
+    public boolean support(EventType type) {
+        return type == EventType.MEETING;
+    }
 }

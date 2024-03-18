@@ -35,9 +35,26 @@ public class AbstractEvent implements Event{
         return title;
     }
 
+    public ZonedDateTime getStartAt() {
+        return startAt;
+    }
+
+    public ZonedDateTime getEndAt() {
+        return endAt;
+    }
+
+    public Duration getDuration() {
+        return duration;
+    }
 
     @Override
     public void print() {
 
     }
+
+    @Override
+    public boolean support(EventType type) {
+        return false;
+    }
+
 }
