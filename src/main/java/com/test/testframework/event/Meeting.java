@@ -24,4 +24,6 @@ public class Meeting extends AbstractEvent{
     public boolean support(EventType type) {
         return type == EventType.MEETING;
     }
+
+
 }

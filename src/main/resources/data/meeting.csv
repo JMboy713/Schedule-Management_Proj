@@ -1,0 +1,5 @@
+id,type,title,participants,meetingRoom,agenda,startAt,endAt
+1,"MEETING","Meeting 1","John, Jane","Room 1","Discussing the project1","2020-01-01 09:00:00","2020-01-01 10:00:00"
+2,"MEETING","Meeting 2","John, Jane","Room 1","Discussing the project2","2020-02-01 10:00:00","2020-02-01 11:00:00"
+3,"MEETING","Meeting 3","John, Jane","Room 1","Discussing the project3","2020-03-01 11:00:00","2020-03-01 12:00:00"
+4,"MEETING","Meeting 4","John, Jane","Room 1","Discussing the project4","2020-04-01 12:00:00","2020-04-01 13:00:00"

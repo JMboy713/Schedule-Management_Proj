@@ -56,5 +56,29 @@ public class AbstractEvent implements Event{
     public boolean support(EventType type) {
         return false;
     }
+    public void validateAndUpdate(){
+        if(deletedYn==true){
+            throw new InvalidEventException("이미 삭제된 일정입니다.");
+        }
+        defaultUpdate();
+        update();
+
+    }
+
+    protected abstract void update();  // 각 이벤트에 맞에 해야함. -> 구현체에서 함
+
+
+
+
+
+    private void defaultUpdate() {
+        this.title;
+        this.startAt;
+        this.endAt;
+        this.duration = Duration.between(startAt, endAt);
+        this.modifiedAt = ZonedDateTime.now();
+    }
+
+
 
 }
